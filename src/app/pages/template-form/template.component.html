@@ -1,0 +1,52 @@
+<form #userForm='ngForm'>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Nombre</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tu nombre" [(ngModel)]="nameUser" name="name" #names="ngModel" required>
+      <div [hidden]="names.valid || names.pristine" class="alert alert-danger">
+            !Nombre requerido¡
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Apellido</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tu apellido" [(ngModel)]="lastNameUser" name="lastName" #lastName="ngModel" required>
+        <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+            !Apellido requerido¡
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Dirección de email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tu correo electronico" [(ngModel)]="emailUser" name="email" #emailuser="ngModel" required>
+        <div [hidden]="emailuser.valid || emailuser.pristine" class="alert alert-danger">
+            ¡Email requerido!
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Usuario de Github</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="User de Github" [(ngModel)]="GitHubUser" name="githubuser" #githubuser="ngModel" required>
+        <div [hidden]="githubuser.valid || githubuser.pristine" class="alert alert-danger">
+            ¡Tu usuario de Github es reuquerido!
+      </div>
+    </div>
+    <button (click)="showInTable()" [disabled]="userForm.form.invalid" class="btn btn-success">Mostrar en tabla</button>
+    <button (click)="userForm.resetForm()" class="btn btn-warning">Limpiar formulario</button>
+</form>
+
+<table class="table" *ngIf="showTable">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Github</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of tableUsers, let i = index">
+      <tr>
+        <th scope="row">{{i}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.github}}</td>
+      </tr>
+    </tbody>
+</table>
+  
