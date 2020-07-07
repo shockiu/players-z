@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ApidataService } from '../../service/apidata.service';
+
 
 @Component({
   selector: 'app-reactive',
@@ -14,7 +16,9 @@ export class ReactiveComponent implements OnInit {
   regexLetter: any = /[a-zA-Z]/;
   regexEmail: any = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+              private fb: FormBuilder,
+              private api: ApidataService) {
     this.tableUsers = new Array();
    }
 
@@ -25,6 +29,9 @@ export class ReactiveComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern(this.regexEmail)]],
       github: ['', [Validators.required]]
     });
+
+    this.api.getUsers().subscribe(res => console.log(res));
+
   }
 
   get name() { return this.formUser.get('name'); }
