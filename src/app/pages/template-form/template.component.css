@@ -1,0 +1,25 @@
+.col-center {
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+}
+
+#icon-left {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#icon-right {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.letter-black{
+    color: black;
+}
+
+.right {
+    margin-right: 20px;
+}

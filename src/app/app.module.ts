@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { DataExample } from './api.data';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataExample)
+    HttpClientInMemoryWebApiModule.forRoot(DataExample),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
