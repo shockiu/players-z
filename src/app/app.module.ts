@@ -1,35 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalModule } from 'ngx-bootstrap/modal';
-
 import { AppRoutingModule } from './app-routing.module';
+import { MaterialModulesModule } from './material-modules/material-modules.module';
+
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/nav-menu/navbar.component';
-import { TemplateComponent } from './pages/template-form/template.component';
-import { ReactiveComponent } from './pages/reactive-form/reactive.component';
-import { HomeComponent } from './pages/home/home.component';
-import { DataExample } from './api.data';
+import { NavbarComponent } from './components/nav/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { PlayerComponent } from './components/player/player.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TemplateComponent,
-    ReactiveComponent,
-    HomeComponent
+    HomeComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataExample),
-    ModalModule.forRoot()
+    MaterialModulesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

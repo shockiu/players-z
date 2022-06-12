@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+// ABSTRACT
+@import './abstract/mixins';
+@import './abstract/variables';
+
+// BASE
+@import './base/reset';
+@import './base/body';
+
+// LAYOUT 
+@import './layout/nav';
+
+// COMPONENTS
+@import './components/buttons';
