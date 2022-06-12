@@ -1,8 +1,3 @@
-export interface Options {
-    id: number;
-    option: string;
-}
-
 export interface Country {
     name:         string;
     country_code: number;

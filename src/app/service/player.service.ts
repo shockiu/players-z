@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject, BehaviorSubject } from 'rxjs';
-import { Player, Country, Sport } from '../interfaces/options.interface';
+import { Country, Sport } from '../interfaces/options.interface';
 import { saveAs } from 'file-saver';
 
 

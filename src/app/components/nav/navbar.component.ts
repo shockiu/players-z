@@ -9,7 +9,7 @@ import { Country, Sport, Player } from '../../interfaces/options.interface';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
   public countrys: Country[] = [...COUNTRY];
   public sports: Sport[] = [...SPORT];
