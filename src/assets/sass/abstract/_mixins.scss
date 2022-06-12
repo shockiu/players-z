@@ -1,10 +1,8 @@
 $breakpoints: (
     'x-small': 375px,
-    'lg-small': 570px,
+    'lg-small': 520px,
     'small': 620px,
-    'middle': 900px,
-    'x-large': 1145px,
-    'large': 1440px,
+    'middle': 700px,
 )!default;
 
 @mixin break($breakpoint) {

@@ -10,7 +10,11 @@
 @import './base/body';
 
 // LAYOUT 
+@import './layout/header';
 @import './layout/nav';
+
 
 // COMPONENTS
 @import './components/buttons';
+@import './components/card';
+@import './components/balls';

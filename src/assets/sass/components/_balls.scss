@@ -1,0 +1,28 @@
+.balls {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.fut {
+    margin-right: 8px;
+}
+
+.baske {
+    margin-left: 8px;
+}
+
+.fut-basketball-rotate {
+    animation: rotateBalls 2.8s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes rotateBalls {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

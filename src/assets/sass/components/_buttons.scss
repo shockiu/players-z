@@ -1,5 +1,11 @@
-.btn {
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-download {
     width: 100%;
-    height: 60px;
-    font-size: 18px;
+    padding: 1.2rem;
+    color: #ffff;
+    background-color: #8AC1EB;
 }

@@ -1,20 +1,28 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-</mat-card>
-  
+
+<div class="balls animate__animated animate__fadeIn"  
+     *ngIf="!showPlayer" [ngClass]="{'fut-basketball-rotate': wait}">
+  <img class="fut" src="../../../assets/svg/basketball.svg" alt="" width="60" height="60">
+  <img class="baske" src="../../../assets/svg/soccer.svg" alt="" width="60" height="60">
+</div>
+
+
+
+<div *ngIf="showPlayer" class="card-container animate__animated animate__fadeIn">
+    <mat-card class="card" >
+        <mat-card-header>
+          <mat-card-title>{{playerInfo.name}}</mat-card-title>
+          <mat-card-subtitle>{{playerInfo.sport}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image  
+            class="img-card" 
+            [src]="playerInfo.url_image" 
+            [alt]="playerInfo.name">
+        <mat-card-actions class="btn-container">
+          <button mat-raised-button
+                  class="btn-download"
+                  (click)=" download()">
+            Descargar <mat-icon>file_download</mat-icon>
+          </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

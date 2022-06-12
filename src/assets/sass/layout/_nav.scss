@@ -3,6 +3,18 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
     padding: 0.5rem 1rem;
-    background-color: #fff;
-    border-bottom: 1px solid #703333;
+    @include break('middle') {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 24px;
 }

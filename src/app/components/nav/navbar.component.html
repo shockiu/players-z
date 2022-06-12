@@ -1,34 +1,41 @@
-<form class="nav-options" [formGroup]="infoPlayer">
-    <mat-form-field appearance="outline">
-        <mat-label>País</mat-label>
-        <mat-select formControlName="country">
-            <mat-option *ngFor="let country of countrys" 
-                        [value]="country.country_code"
-                        (click)="optionSelected(country, 1)"> 
-                {{ country.name }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Deporte</mat-label>
-        <mat-select formControlName="sport" [disabled]="disabledSelectByCountry">
-            <mat-option *ngFor="let sport of sports"  
-                        [value]="sport.sport_code"
-                        (click)="optionSelected(sport, 2)"> 
-                {{ sport.name }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Jugador</mat-label>
-        <mat-select formControlName="player" [disabled]="disabledSelectByCountry || disabledSelectByCountryAndPlayer">
-            <mat-option *ngFor="let player of players"  
-                        [value]="player.player_code"
-                        (click)="optionSelected(player, 3)"> 
-                {{ player.name }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-</form>
+
+<div class="header">
+    <h3 class="title">
+        ¡Busca jugadores por país y deporte!
+    </h3>
+    
+    <form class="nav-options" [formGroup]="infoPlayer">
+        <mat-form-field appearance="outline">
+            <mat-label>País</mat-label>
+            <mat-select formControlName="country">
+                <mat-option *ngFor="let country of countrys" 
+                            [value]="country.country_code"
+                            (click)="optionSelected(country, 1)"> 
+                    {{ country.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Deporte</mat-label>
+            <mat-select formControlName="sport" [disabled]="disabledSelectByCountry">
+                <mat-option *ngFor="let sport of sports"  
+                            [value]="sport.sport_code"
+                            (click)="optionSelected(sport, 2)"> 
+                    {{ sport.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Jugador</mat-label>
+            <mat-select formControlName="player" [disabled]="disabledSelectByCountry || disabledSelectByCountryAndPlayer">
+                <mat-option *ngFor="let player of players"  
+                            [value]="player.player_code"
+                            (click)="optionSelected(player, 3)"> 
+                    {{ player.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
 
 

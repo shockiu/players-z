@@ -1,0 +1,23 @@
+.card-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2rem 2rem;
+}
+
+.card {
+    width: 420px;
+    @include break('lg-small') {
+        width: 300px;
+    }
+    @include break('x-small') {
+        width: 270px;
+    }
+}
+
+.img-card {
+    width: 100%;
+    height: 300px;
+}

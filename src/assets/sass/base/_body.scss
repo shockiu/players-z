@@ -1,9 +1,14 @@
 body {
     font-family: $font-family;
+    background-image: url('/assets/svg/background.svg');
+    background-repeat: no-repeat;
+    @include break('middle') {
+        background-image: url('/assets/svg/background2.svg');
+    }
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.8rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -11,5 +16,5 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: #8AC1EB;
 }  
