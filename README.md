@@ -10,6 +10,9 @@ ng serve
 ```
 Navega a la página:  `http://localhost:4200/`
 
+## DEMO 
+Url: https://players-z.web.app/
+
 
 ## Expliación 
 
